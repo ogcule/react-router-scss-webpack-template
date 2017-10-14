@@ -14,17 +14,27 @@ modules: {
         options: {
           presets: ['env']
         }}
-    }
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader" 
+        }]
+      }
     ]
-    },
-    plugins: [
+  },
+  plugins: [
     new HtmlWebpackPlugin({
       template: 'app/index.html'
     })
   ]
-  ]},
-  output: {
-     filename: '[name].bundle.js',
-     path: path.resolve(__dirname,'dist')
-   }
+]},
+output: {
+  filename: '[name].bundle.js',
+  path: path.resolve(__dirname,'dist')
+}
 }
