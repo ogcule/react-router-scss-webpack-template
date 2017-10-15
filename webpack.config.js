@@ -10,7 +10,8 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    hot: true
+    hot: true,
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
