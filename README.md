@@ -1,1 +1,2 @@
-"# info-server" 
+### A template for react and scss :memo:
+
