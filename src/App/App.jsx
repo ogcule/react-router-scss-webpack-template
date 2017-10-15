@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './App.scss';
 
 function App(props) {
   return (
     <div>
-      <h1>Hello {props.name}</h1>
+      <h1 className={styles.heading}>Hello {props.name}</h1>
     </div>
   );
 }
