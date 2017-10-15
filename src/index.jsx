@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-//  import path from 'path';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import './index.scss';
-import App from './components/App/App';
+import Home from './components/Home/Home';
 import About from './components/About/About';
 import Topics from './components/Topics/Topics';
 
@@ -22,9 +21,6 @@ NotFound.defaultProps = {
     pathname: '',
   },
 };
-// NotFound.propTypes = {
-//   location: PropTypes.string,
-// };
 
 const RouterExample = () => (
   <Router>
@@ -40,7 +36,7 @@ const RouterExample = () => (
           <Link to="/topics">Topics</Link>
         </li>
         <Switch>
-          <Route exact path="/" component={App} />
+          <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/topics" component={Topics} />
           <Route path="*" component={NotFound} />

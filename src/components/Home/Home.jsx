@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './App.scss';
+import styles from './Home.scss';
 
 function App(props) {
   return (
