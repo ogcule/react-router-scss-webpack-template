@@ -20,7 +20,7 @@ const Nav = () => (
       <nav className={styles.nav}>
         <ul>
           <li>
-            <NavLink to="/home" activeClassName={styles.selected}>Home</NavLink>
+            <NavLink exact to="/" activeClassName={styles.selected}>Home</NavLink>
           </li>
           <li>
             <NavLink to="/about" activeClassName={styles.selected}>About</NavLink>
@@ -31,10 +31,10 @@ const Nav = () => (
         </ul>
       </nav>
       <Switch>
-        <Route path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/topics" component={Topics} />
-        <Route path="*" component={NotFound} />
+        <Route component={NotFound} />
       </Switch>
     </div>
 
